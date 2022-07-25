@@ -1,0 +1,170 @@
+:root {
+    /* --card-font-regular : */
+}
+
+.create-design {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    margin-top: 200px;
+}
+
+.create-design h1 {
+    font-size: 78px;
+    font-weight: bolder;
+    color: var(--blue-1);
+}
+
+.create-design p {
+    font-size: 24px;
+    color: var(--p-color);
+    margin-bottom: 100px;
+}
+
+.float {
+    float: left;
+}
+
+.floatR {
+    float: right;
+}
+
+.card1_img_pos {
+    width: 100%;
+    max-width: 500px;
+    top: -80px;
+    right: 0;
+}
+
+.card2_img_pos {
+    width: 100%;
+    max-width: 500px;
+    top: -20px;
+    left: 0;
+}
+
+.card3_img_pos {
+    width: 100%;
+    max-width: 400px;
+    top: -20px;
+    right: 0;
+}
+
+
+.create-design .card {
+    height: 350px;
+    border-radius: 20px;
+    background-color: var(--card-color);
+    margin-top: 80px;
+}
+
+.create-design .card:nth-child(odd) {
+    background: linear-gradient(to right, var(--card-color), white, white);
+
+}
+
+.create-design .card:nth-child(even) {
+    background: linear-gradient(to left, var(--card-color), white, white);
+}
+
+.create-design .card__img {
+    width: 50%;
+    position: relative;
+    transition: all .5s ease;
+
+}
+
+.create-design .card .card__img img {
+    bottom: 0;
+    position: absolute;
+
+}
+
+.create-design .card .card__content {
+    width: 50%;
+    padding: 60px;
+    line-height: 100%;
+
+}
+
+.create-design .card .card__content h2 {
+    font-weight: bolder;
+    font-size: 48px;
+    color: var(--blue-1);
+
+}
+
+.create-design .card .card__content p {
+    font-size: 18px;
+}
+
+.create-design .card .card__content a {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black-1);
+    position: relative;
+}
+
+.create-design .card .card__content a span {
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 20%;
+    right: -30%;
+}
+
+@media screen and (max-width:800px) {
+    .create-design .card .card__img img {
+        width: 120%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+}
+
+@media screen and (max-width:700px) {
+
+    .create-design .card .card__content,
+    .create-design .card .card__img {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width:678px) {
+    .create-design .card {
+        height: 800px;
+
+    }
+
+    .create-design .card__img {
+        margin-top: 20px;
+
+    }
+
+    .create-design .card .card__img img {
+        position: static;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+
+    .create-design .card .card__content {
+        text-align: center;
+    }
+
+    .floatR {
+        float: left;
+    }
+
+    .create-design .card:nth-child(odd),
+    .create-design .card:nth-child(even) {
+        background: var(--card-color)
+    }
+
+}
