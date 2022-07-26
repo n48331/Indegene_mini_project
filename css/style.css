@@ -1,7 +1,16 @@
-:root {
-    /* --card-font-regular : */
+* {
+    box-sizing: border-box;
 }
 
+.float {
+    float: left;
+}
+
+.floatR {
+    float: right;
+}
+
+/*-------- Creative and Design --------*/
 .create-design {
     margin-left: auto;
     margin-right: auto;
@@ -21,13 +30,7 @@
     margin-bottom: 100px;
 }
 
-.float {
-    float: left;
-}
 
-.floatR {
-    float: right;
-}
 
 .card1_img_pos {
     width: 100%;
@@ -114,27 +117,300 @@
     right: -30%;
 }
 
+/*-------- Deliverables --------*/
+.deliverables {
+    background-color: var(--blue-1);
+    padding: 100px;
+    height: 120vw;
+    margin: 150px auto;
+
+
+}
+
+.deliverables h1 {
+    font-size: 78px;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.deliverables p {
+    font-size: 24px;
+    color: var(--white);
+}
+
+.deliverables .container {
+    background-color: var(--blue-1);
+    /* display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px; */
+
+}
+
+
+.deliverables .container .item {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 30%;
+    background-color: var(--white);
+    border-radius: 30px;
+    margin: 15px;
+    height: 383px;
+    text-align: center;
+    padding: 50px 30px;
+
+}
+
+.deliverables .container .item p {
+    color: var(--black-1);
+    font-size: 18px;
+    text-align: left;
+}
+
+.deliverables .container .item h2 {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.deliverables .container .item .image {
+    width: 61.68px;
+}
+
+.deliverables .container .item .mask {
+    position: absolute;
+    bottom: 0;
+    width: 350px;
+    right: 0;
+
+}
+
+/*-------- Work Highlights --------*/
+.highlights .container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.highlights .container h1 {
+    font-size: 78px;
+    font-weight: bolder;
+}
+
+.highlights .container .card__container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-flow: dense;
+    grid-template-rows: masonry;
+    gap: 20px;
+
+}
+
+.highlights .container .card__container .card {
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlights .container .card__container .card:nth-child(odd) {
+    grid-row: 3;
+}
+
+.highlights .container .card__container .card {
+    max-width: 100%;
+}
+
+.highlights .container .card__container .card:hover {
+    transform: scale(1.0125);
+}
+
+.highlights .container .card__container .card img {
+    width: 100%;
+}
+
+.highlights .container .card__container .card span {
+    font-size: 18px;
+    color: var(--grey-2);
+}
+
+.highlights .container .card__container .card p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.highlights .container .card__container .card a {
+    font-size: 26px;
+    line-height: 100%;
+    color: var(--grey-2);
+    text-decoration: underline;
+}
+
+/*-------- Testimonial --------*/
+.testimonial {
+    background-color: var(--blue-2);
+    /* height: 200vh; */
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+
+
+.testimonial h2 {
+    font-weight: bold;
+    font-size: 56px;
+    color: white;
+    line-height: 100%;
+    margin-left: 80px;
+    padding-top: 80px;
+}
+
+.testimonial p {
+    font-size: 24px;
+    color: white;
+    margin-left: 80px;
+}
+
+.testimonial .container {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.testimonial .container .card {
+    width: 100%;
+    position: relative;
+}
+
+.testimonial .container .card .content {
+    position: absolute;
+    top: 80px;
+    left: -40px;
+
+}
+
+.testimonial .container .card .content img {
+    width: 40px;
+    margin: 0 auto;
+}
+
+.testimonial .container .card .content p {
+    color: var(--black-1);
+    font-size: 16px;
+    text-align: left;
+    width: 80%;
+}
+
+.testimonial .container .card .content hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.testimonial .container .card .content h4 {
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.testimonial .container .card .content span {
+    text-align: center;
+    font-size: 15px;
+}
+
+/*-------- Footer --------*/
+.footer__links {
+    background-color: var(--blue-1);
+    height: 60vh;
+    padding: 100px;
+    width: 100%;
+}
+
+.footer__links .links,
+.footer__links .about {
+    width: 50%;
+    color: var(--white);
+}
+
+.footer__links .about p {
+    width: 80%;
+}
+
+.footer__links .link1 {
+    width: 50%;
+    margin-right: 50px;
+}
+
+.footer__links .link1 a {
+    float: left;
+    width: 50%;
+    text-decoration: none;
+    line-height: 260%;
+    color: var(--white);
+
+}
+
+.footer__links .link2 a {
+    float: left;
+    width: 100%;
+    line-height: 260%;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer__copy {
+    background-color: var(--blue-2);
+    color: var(--white);
+    height: 10vh;
+    padding: 30px;
+}
+
+.footer__copy .copy__right {
+    width: 70%;
+}
+
+.footer__copy .privacy {}
+
+.footer__copy .privacy a {
+    margin-left: 50px;
+}
+
+@media screen and (max-width:1100px) {
+    .deliverables .container .item {
+        width: 45%;
+    }
+}
+
 @media screen and (max-width:800px) {
+
+    /*-------- Creative and Design --------*/
     .create-design .card .card__img img {
         width: 120%;
         top: 0;
         right: 0;
         bottom: 0;
-
     }
+
+    /*-------- Deliverables --------*/
+    /*-------- Work Highlights --------*/
+    /*-------- Testimonial --------*/
+    /*-------- Footer --------*/
 }
 
 @media screen and (max-width:700px) {
 
+    /*-------- Creative and Design --------*/
     .create-design .card .card__content,
     .create-design .card .card__img {
         width: 100%;
     }
 
+    /*-------- Deliverables --------*/
+    /*-------- Work Highlights --------*/
+    /*-------- Testimonial --------*/
+    /*-------- Footer --------*/
 
 }
 
 @media screen and (max-width:678px) {
+
+    /*-------- Creative and Design --------*/
     .create-design .card {
         height: 800px;
 
@@ -150,9 +426,7 @@
         display: block;
         width: 80%;
         margin: 0 auto;
-
     }
-
 
     .create-design .card .card__content {
         text-align: center;
@@ -167,4 +441,8 @@
         background: var(--card-color)
     }
 
+    /*-------- Deliverables --------*/
+    /*-------- Work Highlights --------*/
+    /*-------- Testimonial --------*/
+    /*-------- Footer --------*/
 }

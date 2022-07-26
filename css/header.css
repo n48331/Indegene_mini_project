@@ -2,9 +2,6 @@ body {
     margin: 0;
 }
 
-
-
-
 #home_menu,
 #delver_menu {
     font-weight: bold;
@@ -65,6 +62,34 @@ select {
 .header li:nth-child(3),
 .header li:nth-child(4) {
     float: right;
+}
+
+/* .header li:nth-child(1):hover,
+.header li:nth-child(2):hover {
+    border-bottom: 5px solid var(--menu-color-1);
+
+} */
+.header li:nth-child(1) a {
+    position: relative;
+}
+
+.header li:nth-child(1) a:after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 10px;
+    left: 20px;
+    background-color: var(--menu-color-1);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+}
+
+.header li:nth-child(1) a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .header li a {
@@ -164,6 +189,7 @@ select {
     top: 0;
 }
 
+/*------------- Banner ---------- */
 .banner__bg {
     position: absolute;
     top: 50px;
