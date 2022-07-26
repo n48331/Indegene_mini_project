@@ -78,9 +78,9 @@ select {
     position: absolute;
     width: 30%;
     transform: scaleX(0);
-    height: 5px;
+    height: 4px;
     bottom: 10px;
-    left: 20px;
+    left: 30px;
     background-color: var(--menu-color-1);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
