@@ -151,7 +151,7 @@ select {
     height: 100%;
     position: absolute;
     width: 100%;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease;
 }
 
 .header .menu-icon .navicon:before {
