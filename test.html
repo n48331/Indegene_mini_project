@@ -1,66 +1,356 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .dropbtn {
-            background-color: #04AA6D;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-        }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Owl carousal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Owl carousal -->
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/test.css">
+    <title>AMGEN-test</title>
 </head>
 
 <body>
-
-    <h2>Hoverable Dropdown</h2>
-    <p>Move the mouse over the button to open the dropdown menu.</p>
-
-    <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+    <header>
+        <div class="header">
+            <img src="./images/logo.svg" alt="" class="logo">
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#" id="home_menu">Home</a></li>
+                <li><select id="delver_menu">
+                        <option value="rte">RTA</option>
+                        <option value="nab">NAB</option>
+                    </select></li>
+                <li><a href="#" id="contact_menu">Contact ></a></li>
+                <li>
+                    <select id="lang_menu">
+                        <option value="eng">English</option>
+                        <option value="mal">Malayalam</option>
+                    </select>
+                </li>
+            </ul>
         </div>
-    </div>
+        <div class="banner">
+            <div class="logo2">
+                <img src="./images/amgen_logo.png" alt="amgen">
+                <p>Healthcare and branding expertise for effective communication</p>
+                <div class="map">
+                    <img src="./images/banner_map.png" alt="map">
+                </div>
+            </div>
+        </div>
+        <div class="banner__bg">
+            <img src="./images/banner.svg" alt="banner">
+        </div>
+    </header>
+    <main>
+        <section class="create-design">
+            <h1>Creative and Design</h1>
+            <p>Mohammed Nabeel P</p>
+            <div class="card">
+                <div class="card__content float">
+                    <h2>Create</h2>
+                    <p>Embrace experimentation and creativity</p>
+                    <a href="#">Learn More <span class="material-symbols-rounded">
+                            trending_flat
+                        </span></a>
+                </div>
+                <div class="card__img float">
+                    <img class="card1_img_pos" src="./images/create.png" alt="create">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content floatR ">
+                    <h2>Launch</h2>
+                    <p>Turn your ideas into reality through design, campaigns, content and storytelling</p>
+                    <a href="#">Learn More <span class="material-symbols-rounded">
+                            trending_flat
+                        </span></a>
+                </div>
+                <div class="card__img float ">
+                    <img class="card2_img_pos" src="./images/launch.png" alt="create">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content float">
+                    <h2>Engage</h2>
+                    <p>Differentiate from competition</p>
+                    <a href="#">Learn More <span class="material-symbols-rounded">
+                            trending_flat
+                        </span></a>
+                </div>
+                <div class="card__img float">
+                    <img class="card3_img_pos" src="./images/engage.png" alt="create">
+                </div>
+            </div>
+        </section>
+        <!-- owl-carousel owl-theme -->
+        <section class="deliverables">
+            <h1>Deliverables</h1>
+            <p>Engage audience through branded and unbranded assets</p>
+            <div id="deliverables__container" class="container">
+                <div class="item">
+                    <img class="image" src="./images/deliver1.png" alt="deliverable">
+                    <h2>RTE 1</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that
+                        the company they&apos;ve subscribed to is a reliable brand.</p>
+                    <img class="mask" src="./images/mask.png" alt="">
+                </div>
 
+                <div class="item">
+                    <img class="image" src="./images/deliver2.png" alt="deliverable">
+                    <h2>RTE 2</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that
+                        the company they&apos;ve subscribed to is a reliable brand.</p>
+                    <img class="mask" src="./images/mask.png" alt="">
+                </div>
+
+                <div class="item">
+                    <img class="mask" src="./images/mask.png" alt="">
+                    <img class="image" src="./images/deliver3.png" alt="deliverable">
+                    <h2>RTE 3</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that
+                        the company they&apos;ve subscribed to is a reliable brand.</p>
+                </div>
+                <div class="item">
+                    <img class="mask" src="./images/mask.png" alt="">
+                    <img class="image" src="./images/deliver4.png" alt="deliverable">
+                    <h2>RTE 4</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that
+                        the company they&apos;ve subscribed to is a reliable brand.</p>
+                </div>
+
+                <div class="item">
+                    <img class="mask" src="./images/mask.png" alt="">
+                    <img class="image" src="./images/deliver5.png" alt="deliverable">
+                    <h2>RTE</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that
+                        the company they&apos;ve subscribed to is a reliable brand.</p>
+                </div>
+                <div class="item">
+                    <img class="mask" src="./images/mask.png" alt="">
+                    <img class="image" src="./images/deliver6.png" alt="deliverable">
+                    <h2>RTE</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that
+                        the company they&apos;ve subscribed to is a reliable brand.</p>
+                </div>
+                <div class="item">
+                    <img class="mask" src="./images/mask.png" alt="">
+                    <img class="image" src="./images/deliver7.png" alt="deliverable">
+                    <h2>RTE</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that
+                        the company they&apos;ve subscribed to is a reliable brand.</p>
+                </div>
+                <div class="item">
+                    <img class="mask" src="./images/mask.png" alt="">
+                    <img class="image" src="./images/deliver8.png" alt="deliverable">
+                    <h2>RTE</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that
+                        the company they&apos;ve subscribed to is a reliable brand.</p>
+                </div>
+
+
+                <div class="item"><img class="mask" src="./images/mask.png" alt=""><img class="image"
+                        src="./images/deliver9.png" alt="deliverable">
+                    <h2>RTE 9</h2>
+                    <p>A Rep triggered email is an automated email that marketers send to inform customers and show
+                        that the company they&apos;ve subscribed to is a reliable brand.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="highlights">
+            <div class="container">
+                <h1>Work Highlights</h1>
+                <div id="highlights__container" class="card__container">
+                    <div class="card">
+                        <img src="./images/highlight-1.png" alt="highlights">
+                        <span>RTE</span>
+                        <p>Prolia Thailand Compliant Emailers</p>
+                        <a>Check it out</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/highlight-2.png" alt="highlights">
+                        <span>RTE</span>
+                        <p>Prolia Thailand Compliant Emailers</p>
+                        <a>Check it out</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/highlight-3.png" alt="highlights">
+                        <span>RTE</span>
+                        <p>Prolia Thailand Compliant Emailers</p>
+                        <a>Check it out</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/highlight-4.png" alt="highlights">
+                        <span>RTE</span>
+                        <p>Prolia Thailand Compliant Emailers</p>
+                        <a>Check it out</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/highlight-5.png" alt="highlights">
+                        <span>RTE</span>
+                        <p>Prolia Thailand Compliant Emailers</p>
+                        <a>Check it out</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/highlight-6.png" alt="highlights">
+                        <span>RTE</span>
+                        <p>Prolia Thailand Compliant Emailers</p>
+                        <a>Check it out</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial">
+            <h2>Testimonial</h2>
+            <p>Our customers love us! Read what they have to say below.</p>
+
+            <div class="container owl-carousel owl-theme">
+                <div class="card">
+                    <img src="./images/testimonial_bg.svg" alt="testimonial_bg">
+                    <div class="content">
+                        <img src="./images/testimonial_quote-1.png" alt="testimonial_quote">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                            sem.
+                            <hr>
+                        </p>
+                        <h4>Johnson <br>
+                            <span>Executive Manager</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/testimonial_bg.svg" alt="testimonial_bg">
+                    <div class="content">
+                        <img src="./images/testimonial_quote-1.png" alt="testimonial_quote">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                            sem.
+                            <hr>
+                        </p>
+                        <h4>Johnson <br>
+                            <span>Executive Manager</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/testimonial_bg.svg" alt="testimonial_bg">
+                    <div class="content">
+                        <img src="./images/testimonial_quote-1.png" alt="testimonial_quote">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                            sem.
+                            <hr>
+                        </p>
+                        <h4>Johnson <br>
+                            <span>Executive Manager</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/testimonial_bg.svg" alt="testimonial_bg">
+                    <div class="content">
+                        <img src="./images/testimonial_quote-1.png" alt="testimonial_quote">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                            sem.
+                            <hr>
+                        </p>
+                        <h4>Johnson <br>
+                            <span>Executive Manager</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/testimonial_bg.svg" alt="testimonial_bg">
+                    <div class="content">
+                        <img src="./images/testimonial_quote-1.png" alt="testimonial_quote">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                            sem.
+                            <hr>
+                        </p>
+                        <h4>Johnson <br>
+                            <span>Executive Manager</span>
+                        </h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer__links">
+            <div class="about float">
+                <p><img src="./images/amgen_logo-white.png" alt="Logo" class="logo"></p>
+                <p>“Great things are rarely achieved by just one person. Usually, they are accomplished by a group of
+                    people, and when everyone is committed to the overall goal.”</p>
+            </div>
+            <div class="links float">
+                <div class="link1 float">
+                    <h2>Deliverables</h2>
+                    <a href="#">RTE</a>
+                    <a href="#">Print</a>
+                    <a href="#">IDA</a>
+                    <a href="#">Illustrations</a>
+                    <a href="#">Slide Deck</a>
+                    <a href="#">Motion Graphics</a>
+                    <a href="#">IPDF</a>
+                    <a href="#">3D Packaging</a>
+                </div>
+                <div class="link2 float">
+                    <h2>Resources</h2>
+                    <a href="#">News</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Videos</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="copy__right float">
+                &copy; 2021 AMGEN. All Rights Reserved.
+            </div>
+            <div class="privacy float">
+                <a>Privacy Policy</a>
+                <a>Terms of Service</a>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="./js/test.js"></script>
 </body>
 
 </html>

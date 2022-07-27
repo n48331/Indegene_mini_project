@@ -1,15 +1,12 @@
 $(document).ready(function () {
   $(window).resize(function () {
-    if ($(window).width() <= 1100) {
+    if ($(window).width() <= 800) {
       location.reload(true);
     }
   });
-  if ($(window).width() < 800) {
+
+  if ($(window).width() < 1100) {
     $("#highlights__container").addClass("owl-carousel owl-theme");
-  } else {
-    $("#highlights__container").removeClass("owl-carousel owl-theme");
-  }
-  if ($(window).width() < 800) {
     $("#deliverables__container").addClass("owl-carousel owl-theme");
     var divs = $("#deliverables__container > div.item");
     for (var i = 0; i < divs.length; i += 4) {
@@ -28,7 +25,7 @@ $(document).ready(function () {
     // Owl Carousel
     var owl = $(".owl-carousel");
     owl.owlCarousel({
-      items: 2,
+      items: 1,
       margin: 20,
       loop: false,
       nav: true,
@@ -37,26 +34,36 @@ $(document).ready(function () {
         0: {
           items: 1,
         },
-
-        800: {
-          items: 2,
+        1100: {
+          items: 1,
+        },
+      },
+    });
+  });
+  $(function () {
+    // Owl Carousel
+    var owl = $(".owl-carousel");
+    owl.owlCarousel({
+      items: 1,
+      margin: 20,
+      loop: false,
+      nav: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        1100: {
+          items: 1,
         },
       },
     });
   });
 });
 
-// $(window)
-//   .bind("resize", function () {
-//     console.log($(this).width());
-//     if ($(this).width() > 800) {
-//       $("#highlights__container")
-//         .removeClass("owl-carousel owl-theme")
-//         .addClass("card__container");
-//     } else {
-//       $("#highlights__container").addClass(
-//         "card__container owl-carousel owl-theme"
-//       );
+// $(document).ready(function () {
+//     var divs = $("div > div");
+//     for(var i = 0; i < divs.length; i+=4) {
+//       divs.slice(i, i+4).wrapAll("<div class='new'></div>");
 //     }
-//   })
-//   .trigger("resize");
+// });
