@@ -1,9 +1,4 @@
 $(document).ready(function () {
-  $(window).resize(function () {
-    if ($(window).width() <= 1100) {
-      location.reload(true);
-    }
-  });
   if ($(window).width() < 800) {
     $("#highlights__container").addClass("owl-carousel owl-theme");
   } else {
