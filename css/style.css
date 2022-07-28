@@ -87,11 +87,7 @@ main h1 {
     float: right;
 }
 
-/* .header li:nth-child(1):hover,
-.header li:nth-child(2):hover {
-    border-bottom: 5px solid var(--menu-color-1);
 
-} */
 .header .menu>li:nth-child(1) a,
 .header .menu>li:nth-child(2) a {
     position: relative;
@@ -108,7 +104,12 @@ main h1 {
     background-color: var(--menu-color-1);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+
 }
+
+/* li.current>a::after {
+    transform: scaleX(1);
+} */
 
 .header .menu>li:nth-child(1)>a:hover:after,
 .header .menu>li:nth-child(2)>a:hover:after {
@@ -864,6 +865,10 @@ main h1 {
         width: 43%;
         height: 200px;
 
+    }
+
+    .deliverables .container .item img {
+        margin: 0 auto;
     }
 
     .deliverables .container .item p {

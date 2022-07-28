@@ -23,8 +23,13 @@ $(document).ready(function () {
     $("#deliverables__container").removeClass("owl-carousel owl-theme");
   }
 
-  $(".header a").click(function () {
-    $(this).css("color", "red");
+  $("#home_menu").click(function () {
+    $("#deliver_menu").css("color", "");
+    $(this).css({ color: "var(--menu-color-1)" });
+  });
+  $("#deliver_menu").click(function () {
+    $("#home_menu").css("color", "");
+    $(this).css("color", "var(--menu-color-1)");
   });
 
   $(function () {
