@@ -50,17 +50,50 @@ $(document).ready(function () {
   });
 });
 
-// $(window)
-//   .bind("resize", function () {
-//     console.log($(this).width());
-//     if ($(this).width() > 800) {
-//       $("#highlights__container")
-//         .removeClass("owl-carousel owl-theme")
-//         .addClass("card__container");
-//     } else {
-//       $("#highlights__container").addClass(
-//         "card__container owl-carousel owl-theme"
-//       );
-//     }
-//   })
-//   .trigger("resize");
+// Contact US
+$(document).ready(function () {
+  $("#contact__form").validate({
+    errorClass: "error fail-alert",
+    validClass: "valid",
+    rules: {
+      name: {
+        required: true,
+        minlength: 4,
+        // pattern: "^[a-zA-Z_]*$",
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      phone: {
+        number: true,
+        minlength: 10,
+        maxlength: 10,
+      },
+    },
+    messages: {
+      name: {
+        required: "Your name is required",
+        minlength: "Enter at least 4 characters",
+        // pattern: "Numbers are not allowed",
+      },
+      email: {
+        required: "Your email is required",
+        email: "Enter a valid email",
+      },
+      phone: {
+        minlength: "10 digits is required",
+        maxlength: "Not valid number.Enter only 10 digits",
+      },
+    },
+    errorElement: "div",
+    errorPlacement: function (error, element) {
+      var placement = $(element).data("error");
+      if (placement) {
+        $(placement).append(error);
+      } else {
+        error.insertAfter(element);
+      }
+    },
+  });
+});
