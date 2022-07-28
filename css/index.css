@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+main h1 {
+    font-size: 78px;
+}
+
 .float {
     float: left;
 }
@@ -9,6 +13,8 @@
 .floatR {
     float: right;
 }
+
+
 
 /*-------- Creative and Design --------*/
 .create-design {
@@ -19,7 +25,6 @@
 }
 
 .create-design h1 {
-    font-size: 78px;
     font-weight: bolder;
     color: var(--blue-1);
 }
@@ -126,7 +131,6 @@
 }
 
 .deliverables h1 {
-    font-size: 78px;
     font-weight: bolder;
     color: var(--white);
 }
@@ -171,14 +175,14 @@
 }
 
 .deliverables .container .item .image {
-    width: 61.68px;
+    max-width: 61.68px;
 }
 
 .deliverables .container .item .mask {
     position: absolute;
     bottom: 0;
-    width: 350px;
     right: 0;
+    width: 100%;
 
 }
 
@@ -189,7 +193,6 @@
 }
 
 .highlights .container h1 {
-    font-size: 78px;
     font-weight: bolder;
 }
 
@@ -276,7 +279,7 @@
 .testimonial .container .card .testimonial__card-circle {
     position: absolute;
     width: 80px;
-    top: 0px;
+    top: 10px;
     left: 50px;
     z-index: 10;
 }
@@ -315,66 +318,16 @@
 }
 
 /*-------- Footer --------*/
-.footer__links {
-    background-color: var(--blue-1);
-    overflow: auto;
-    padding: 100px;
-    width: 100%;
-}
 
-.footer__links .links,
-.footer__links .about {
-    width: 50%;
-    color: var(--white);
-    transition: all 0.2s ease;
-
-}
-
-.footer__links .about p {
-    width: 80%;
-}
-
-.footer__links .link1 {
-    width: 50%;
-    margin-right: 50px;
-}
-
-.footer__links .link1 a {
-    float: left;
-    width: 50%;
-    text-decoration: none;
-    line-height: 260%;
-    color: var(--white);
-
-}
-
-.footer__links .link2 a {
-    float: left;
-    width: 100%;
-    line-height: 260%;
-    text-decoration: none;
-    color: var(--white);
-}
-
-.footer__copy {
-    background-color: var(--blue-2);
-    color: var(--white);
-    padding: 30px;
-    overflow: auto;
-}
-
-.footer__copy .copy__right {
-    width: 65%;
-}
-
-.footer__copy .privacy a {
-    margin-left: 50px;
-}
 
 @media screen and (max-width:1100px) {
 
     /*-------- Creative and Design --------*/
     /*-------- Deliverables css --------*/
+    .deliverables {
+        padding: 50px;
+    }
+
     .deliverables .container .item {
         width: 30%;
         margin: 10px;
@@ -397,23 +350,14 @@
 
 
     /*-------- Footer --------*/
-    .footer__links .links,
-    .footer__links .about {
-        width: 120%;
-    }
 
-
-
-    .footer__copy .copy__right {
-        width: 50%;
-    }
-
-    .footer__copy .privacy a {
-        margin-left: 10px;
-    }
 }
 
 @media screen and (max-width:800px) {
+    main h1 {
+        font-size: 60px;
+        text-align: center;
+    }
 
     /*-------- Creative and Design --------*/
     .create-design .card .card__img img {
@@ -483,6 +427,9 @@
 }
 
 @media screen and (max-width:678px) {
+    main h1 {
+        font-size: 48px;
+    }
 
     /*-------- Creative and Design --------*/
     .create-design .card {
@@ -516,31 +463,25 @@
     }
 
     /*-------- Deliverables css--------*/
-    .deliverables .container .item {
 
-        width: 40%;
-        height: 200px;
+
+    .deliverables .container .item {
+        margin: 5px;
+        width: 45%;
 
     }
 
     /*-------- Work Highlights css --------*/
     /*-------- Testimonial --------*/
     /*-------- Footer --------*/
-    .footer__links .link1 {
-        width: 100%;
-        margin-right: 30px;
-    }
 
-
-    .footer__links .about p {
-        width: 90%;
-        text-align: center;
-    }
 }
 
 @media screen and (max-width:400px) {
 
     /*-------- Deliverables css--------*/
+
+
     .deliverables .container .item {
 
         width: 90%;

@@ -2,22 +2,34 @@ body {
     margin: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --menu-color-1: #EC0B78;
+    --text-color-1: #3C3C3C;
+    --black-1: #3D3D3D;
+    --grey-1: #CACACA;
+    --grey-2: #959595;
+    --blue-1: #0C4DA2;
+    --blue-2: #01234F;
+    --white: white;
+    --card-color: #F1F1F1;
+    --p-color: rgb(155, 152, 152);
+}
+
 #home_menu,
-#delver_menu {
+#deliver_menu {
     font-weight: bold;
     font-size: 18px;
-}
-
-#delver_menu {
-    border: 0;
-    margin: 20px 30px 0px 20px;
-    text-decoration: none;
-    outline: 0;
-}
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 
 #lang_menu {
@@ -69,11 +81,12 @@ select {
     border-bottom: 5px solid var(--menu-color-1);
 
 } */
-.header li:nth-child(1) a {
+.header .menu>li:nth-child(1) a,
+.header .menu>li:nth-child(2) a {
     position: relative;
 }
 
-.header li:nth-child(1) a:after {
+.header li a:after {
     content: '';
     position: absolute;
     width: 30%;
@@ -87,12 +100,13 @@ select {
 
 }
 
-.header li:nth-child(1) a:hover:after {
+.header .menu>li:nth-child(1)>a:hover:after,
+.header .menu>li:nth-child(2)>a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-.header li a {
+.header .menu>li a {
     display: block;
     padding: 20px 20px;
     text-decoration: none;
@@ -101,8 +115,8 @@ select {
     outline: 0;
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
+.header .menu li a:hover,
+.header .menu .menu-btn:hover {
     color: var(--menu-color-1);
 }
 
@@ -120,6 +134,33 @@ select {
     clear: both;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+}
+
+.header .menu .deliver_menu>ul {
+    position: absolute;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    display: none;
+
+}
+
+.header .menu .deliver_menu>ul li {
+    clear: both;
+    width: 100%;
+    border-top: 1px solid rgb(0, 0, 0, .1);
+    font-size: 14px;
+
+}
+
+.header .menu .deliver_menu>ul li a {
+    padding: 10px;
+}
+
+.header .menu .deliver_menu:focus-within>ul,
+.header .menu .deliver_menu:hover>ul {
+    display: initial;
 }
 
 /* menu icon */
@@ -221,12 +262,90 @@ select {
     width: 250px;
 }
 
+/* --------FOOTER ------------------ */
 
-@media (max-width: 835px) {
+
+.footer__links {
+    background-color: var(--blue-1);
+    overflow: hidden;
+    padding: 100px;
+    width: 100%;
+}
+
+.footer__links .links,
+.footer__links .about {
+    width: 50%;
+    color: var(--white);
+    transition: all 0.2s ease;
+
+}
+
+.footer__links .about p {
+    width: 80%;
+}
+
+.footer__links .link1 {
+    width: 50%;
+    margin-right: 50px;
+}
+
+.footer__links .link1 a {
+    float: left;
+    width: 50%;
+    text-decoration: none;
+    line-height: 260%;
+    color: var(--white);
+
+}
+
+.footer__links .link2 a {
+    float: left;
+    width: 100%;
+    line-height: 260%;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer__copy {
+    background-color: var(--blue-2);
+    color: var(--white);
+    padding: 30px;
+    overflow: auto;
+}
+
+.footer__copy .copy__right {
+    width: 65%;
+}
+
+.footer__copy .privacy a {
+    margin-left: 50px;
+}
+
+@media screen and (max-width:1100px) {
+
+    /*-------- Footer --------*/
+    .footer__links .links,
+    .footer__links .about {
+        width: 120%;
+    }
+
+
+
+    .footer__copy .copy__right {
+        width: 50%;
+    }
+
+    .footer__copy .privacy a {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 912px) {
 
     .header li:nth-child(3),
     .header li:nth-child(4) {
-        float: none;
+        float: left;
+        width: 100%;
     }
 
     #lang_menu {
@@ -248,6 +367,12 @@ select {
         color: var(--text-color-1);
     }
 
+    .header .menu .deliver_menu>ul {
+        position: inherit;
+        width: 100%;
+        box-shadow: 0
+    }
+
     .banner {
         margin-top: 80px;
     }
@@ -267,7 +392,7 @@ select {
 }
 
 /* 768px and above */
-@media (min-width: 835px) {
+@media (min-width: 912px) {
     .header li {
         float: left;
     }
@@ -287,6 +412,21 @@ select {
     }
 
 
+}
+
+@media screen and (max-width:678px) {
+
+    /*-------- Footer --------*/
+    .footer__links .link1 {
+        width: 100%;
+        margin-right: 30px;
+    }
+
+
+    .footer__links .about p {
+        width: 90%;
+        text-align: center;
+    }
 }
 
 @media (max-width:500px) {

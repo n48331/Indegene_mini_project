@@ -8,6 +8,7 @@ $(document).ready(function () {
       name: {
         required: true,
         minlength: 4,
+        // pattern: "^[a-zA-Z_]*$",
       },
       email: {
         required: true,
@@ -23,6 +24,7 @@ $(document).ready(function () {
       name: {
         required: "Your name is required",
         minlength: "Enter at least 4 characters",
+        // pattern: "Numbers are not allowed",
       },
       email: {
         required: "Your email is required",

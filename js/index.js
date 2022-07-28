@@ -1,12 +1,20 @@
 $(document).ready(function () {
+  $(window).resize(function () {
+    if ($(window).width() <= 1100) {
+      location.reload(true);
+    }
+  });
+
   if ($(window).width() < 800) {
     $("#highlights__container").addClass("owl-carousel owl-theme");
   } else {
     $("#highlights__container").removeClass("owl-carousel owl-theme");
   }
+
   if ($(window).width() < 800) {
     $("#deliverables__container").addClass("owl-carousel owl-theme");
     var divs = $("#deliverables__container > div.item");
+
     for (var i = 0; i < divs.length; i += 4) {
       divs.slice(i, i + 4).wrapAll("<div></div>");
     }
@@ -22,6 +30,7 @@ $(document).ready(function () {
   $(function () {
     // Owl Carousel
     var owl = $(".owl-carousel");
+
     owl.owlCarousel({
       items: 2,
       margin: 20,
