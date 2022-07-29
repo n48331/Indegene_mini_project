@@ -61,6 +61,18 @@ main h1 {
     font-weight: bold;
     font-size: 16px;
     color: var(--white);
+    transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+
+}
+
+#contact_menu:hover {
+    transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    -o-transform: scale(1.08);
 }
 
 /* header */
@@ -98,12 +110,18 @@ main h1 {
     position: absolute;
     width: 30%;
     transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -o-transform: scaleX(0);
     height: 4px;
     bottom: 10px;
     left: 20px;
     background-color: var(--menu-color-1);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+    -moz-transition: transform 0.25s ease-out;
+    -webkit-transition: transform 0.25s ease-out;
+    -o-transition: transform 0.25s ease-out;
 
 }
 
@@ -114,6 +132,9 @@ main h1 {
 .header .menu>li:nth-child(1)>a:hover:after,
 .header .menu>li:nth-child(2)>a:hover:after {
     transform: scaleX(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
     transform-origin: bottom left;
 }
 
@@ -145,6 +166,9 @@ main h1 {
     clear: both;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+    -moz-transition: max-height 0.2s ease-out;
+    -webkit-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
 }
 
 .header .menu .deliver_menu>ul {
@@ -178,7 +202,7 @@ main h1 {
 .header .menu-icon {
     cursor: pointer;
     float: right;
-    padding: 28px 20px;
+    padding: 30px 20px;
     position: relative;
     user-select: none;
 }
@@ -187,10 +211,13 @@ main h1 {
 .header .menu-icon .navicon {
     background-color: var(--blue-1);
     display: block;
-    height: 2.5px;
+    height: 4px;
     position: relative;
     transition: background-color 0.4s;
-    width: 18px
+    -moz-transition: background-color 0.4s;
+    -webkit-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    width: 20px
 }
 
 
@@ -204,6 +231,9 @@ main h1 {
     position: absolute;
     width: 100%;
     transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 }
 
 .header .menu-icon .navicon:before {
@@ -230,10 +260,16 @@ main h1 {
 
 .header .menu-btn:checked~.menu-icon .navicon:before {
     transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
 }
 
 .header .menu-btn:checked~.menu-icon .navicon:after {
     transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
 }
 
 .header .menu-btn:checked~.menu-icon .navicon:not(.steps) .navicon:before,
@@ -335,7 +371,10 @@ main h1 {
 .create-design .card__img {
     width: 50%;
     position: relative;
-    transition: all .5s ease;
+    transition: all .2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 
 }
 
@@ -369,14 +408,44 @@ main h1 {
     text-decoration: none;
     color: var(--black-1);
     position: relative;
+    transition: all .6s ease;
 }
+
+
 
 .create-design .card .card__content a span {
     font-size: 28px;
     font-weight: bold;
     position: absolute;
     top: 20%;
-    right: -30%;
+    right: -35%;
+}
+
+.create-design .card .card__content a:hover>span {
+    right: -50%;
+    font-size: 32px;
+    animation: bounce 1s infinite;
+    -moz-animation: bounce 1s infinite;
+    -o-animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        right: -25%;
+    }
+
+    50% {
+        right: -40%;
+
+
+    }
+
+    100% {
+        right: -25%;
+
+
+    }
 }
 
 /*-------- Deliverables css --------*/
@@ -414,11 +483,19 @@ main h1 {
     height: 383px;
     text-align: center;
     padding: 50px 30px;
-    transition: all .5s ease;
+    transition: all .2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 
 }
 
-
+.deliverables .container .item:hover {
+    transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
 
 .deliverables .container .item p {
     color: var(--black-1);
@@ -466,6 +543,9 @@ main h1 {
 
 .highlights .container .card__container .card:hover {
     transform: scale(1.0125);
+    -moz-transform: scale(1.0125);
+    -webkit-transform: scale(1.0125);
+    -o-transform: scale(1.0125);
 }
 
 .highlights .container .card__container .card img {
@@ -587,6 +667,9 @@ main h1 {
     width: 50%;
     color: var(--white);
     transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 
 }
 
@@ -633,6 +716,12 @@ main h1 {
 
 .footer__copy .privacy a {
     margin-left: 50px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer__copy .privacy a:hover {
+    color: var(--grey-1);
 }
 
 /* ---------------Contact us--------- */
@@ -950,6 +1039,12 @@ main h1 {
         text-align: center;
     }
 
+    .create-design p {
+        text-align: center;
+        font-size: 24px;
+
+    }
+
     .floatR {
         float: left;
     }
@@ -982,6 +1077,45 @@ main h1 {
         text-align: center;
     }
 
+
+    /* ---------------Contact us--------- */
+    .error {
+        font-size: 14px;
+
+
+    }
+
+    .contact h1 {
+        font-size: 65px;
+    }
+
+
+
+    .contact .contact__content .contact__form {
+        font-size: 22px;
+    }
+
+    .contact .contact__content .contact__form input {
+        height: 50px;
+        font-size: 20px;
+        padding-left: 15px;
+        margin: 5px 0;
+
+    }
+
+
+
+    #message {
+        font-size: 20px;
+    }
+
+    .testimonial h2 {
+        font-size: 50px;
+    }
+
+    .testimonial p {
+        font-size: 20px;
+    }
 }
 
 @media (max-width:500px) {

@@ -25,8 +25,12 @@ $(document).ready(function () {
 
   $("#home_menu").click(function () {
     $("#deliver_menu").css("color", "");
-    $(this).css({ color: "var(--menu-color-1)" });
+
+    $(this).css({
+      color: "var(--menu-color-1)",
+    });
   });
+
   $("#deliver_menu").click(function () {
     $("#home_menu").css("color", "");
     $(this).css("color", "var(--menu-color-1)");
@@ -66,34 +70,41 @@ $(document).ready(function () {
         minlength: 4,
         // pattern: "^[a-zA-Z_]*$",
       },
+
       email: {
         required: true,
         email: true,
       },
+
       phone: {
         number: true,
         minlength: 10,
         maxlength: 10,
       },
     },
+
     messages: {
       name: {
         required: "Your name is required",
         minlength: "Enter at least 4 characters",
         // pattern: "Numbers are not allowed",
       },
+
       email: {
         required: "Your email is required",
         email: "Enter a valid email",
       },
+
       phone: {
         minlength: "10 digits is required",
         maxlength: "Not valid number.Enter only 10 digits",
       },
     },
+
     errorElement: "div",
     errorPlacement: function (error, element) {
       var placement = $(element).data("error");
+
       if (placement) {
         $(placement).append(error);
       } else {
