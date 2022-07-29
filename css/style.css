@@ -155,7 +155,6 @@ main h1 {
 .header .logo {
     display: block;
     float: left;
-    font-size: 20px;
     padding: 20px 20px;
     text-decoration: none;
 }
@@ -283,6 +282,17 @@ main h1 {
     top: 50px;
     z-index: -10;
     width: 100%;
+    animation: wave 1s linear;
+}
+
+@keyframes wave {
+    0% {
+        top: -500px;
+    }
+
+    100% {
+        top: 50px;
+    }
 }
 
 .banner__bg img {
@@ -293,7 +303,11 @@ main h1 {
 .banner {
     text-align: center;
     margin-top: 100px;
+
 }
+
+
+
 
 .banner .logo2 .map {
     width: fit-content;
@@ -303,10 +317,39 @@ main h1 {
 .banner .logo2 .map img {
     width: 85%;
     margin-top: 10%;
+
 }
 
 .banner .logo2 img {
     width: 250px;
+}
+
+.banner .logo2>img,
+.banner .logo2>p {
+    animation: logo_bounce 2s linear;
+
+}
+
+@keyframes logo_bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
 }
 
 /*-------- Creative and Design --------*/
@@ -1136,7 +1179,7 @@ main h1 {
 
     .deliverables .container .item {
 
-        width: 90%;
+        width: 45%;
         height: 200px;
 
     }
