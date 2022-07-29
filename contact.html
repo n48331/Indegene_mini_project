@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+        integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <header>
+        <div class="header"><img src="./images/logo.svg" alt="" class="logo"><input class="menu-btn" type="checkbox"
+                id="menu-btn"><label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="/" id="home_menu">Home</a></li>
+                <li class="deliver_menu"><a href="../#deliverables" id="deliver_menu">Deliverables</a>
+                    <ul>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                        <li><a target="_blank" href="#">RTE</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="contact_menu">Contact <b>&gt;</b></a></li>
+                <li><select id="lang_menu">
+                        <option value="eng">English</option>
+                        <option value="mal">Malayalam</option>
+                    </select></li>
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="logo2"><img src="./images/amgen_logo.png" alt="amgen">
+                <p>Healthcare and branding expertise for effective communication</p>
+                <div class="map"><img src="./images/banner_map.png" alt="map"></div>
+            </div>
+        </div>
+        <div class="banner__bg"><img src="./images/banner.svg" alt="banner"></div>
+    </header>
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <div class="contact__content">
+                <div class="contact__image">
+                    <img src="./images/contact.png" alt="contact">
+                </div>
+                <div class="contact__form">
+                    <form action="" id="contact__form">
+                        <label for="name">Full Name</label>
+                        <input id="name" name="name" type="text" required pattern="^[a-zA-Z_]*$">
+                        <label for="email">Email Address</label>
+                        <input id="email" name="email" type="email" required>
+                        <label for="phone">Contact Number</label>
+                        <input id="phone" name="phone" type="number">
+                        <label for="message">Message</label>
+                        <textarea id="message"></textarea>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__links">
+            <div class="about float">
+                <p><img src="./images/amgen_logo-white.png" alt="Logo" class="logo"></p>
+                <p>“Great things are rarely achieved by just one person. Usually,
+                    they are accomplished by a group of people,
+                    and when everyone is committed to the overall goal.”</p>
+            </div>
+            <div class="links float">
+                <div class="link1 float">
+                    <h2>Deliverables</h2><a href="#">RTE</a><a href="#">Print</a><a href="#">IDA</a><a
+                        href="#">Illustrations</a><a href="#">Slide Deck</a><a href="#">Motion Graphics</a><a
+                        href="#">IPDF</a><a href="#">3D Packaging</a>
+                </div>
+                <div class="link2 float">
+                    <h2>Resources</h2>
+                    <a href="https://www.indegene.com/" target="_blank">News</a>
+                    <a href="https://catalyst.indegene.com/" target="_blank">Blog</a>
+                    <a href="https://www.amazon.in/" target="_blank">Videos</a>
+                    <a href="https://www.indegene.com/" target="_blank">FAQs</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="copy__right float">&copy;
+                2021 AMGEN. All Rights Reserved. </div>
+            <div class="privacy float"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        </div>
+    </footer>
+
+    <script src="./js/validater.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
