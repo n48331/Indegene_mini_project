@@ -41,8 +41,6 @@ $(document).ready(function () {
     var owl = $(".owl-carousel");
 
     owl.owlCarousel({
-      animateIn: "fadeIn",
-      animateOut: "fadeOut",
       smartSpeed: 450,
       autoplay: true,
       rewind: true,
